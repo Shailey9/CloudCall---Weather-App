@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<WeatherInfo>?, response: Response<WeatherInfo>?) {
                 if (!response!!.isSuccessful) {
                     println(response.message())
-                    println("*************** Error")
                     return
                 }
                 showWeather(response.body())
